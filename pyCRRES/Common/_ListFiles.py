@@ -1,5 +1,8 @@
 import numpy as np
 from .. import Globals
+import os
+import time
+import PyFileIO as pf
 
 def _GetFileName(line,ext):
 	
@@ -21,7 +24,7 @@ def _GetFileName(line,ext):
 		
 	return url,fname
 		
-def _DownloadHTTP(url,ext):
+def _ListFiles(url,ext):
 	'''
 	Download the HTTP file and return a list of file names and URLs
 	
@@ -51,4 +54,7 @@ def _DownloadHTTP(url,ext):
 				files.append(f)
 				urls.append(u)
 				
-	return urls,fnames
+	#remove the temporary file
+	os.system('rm -v '+tmpfname)
+				
+	return urls,files
