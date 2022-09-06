@@ -8,5 +8,8 @@ if DataPath is None:
 	print("$CRRES_DATA environment variable not set, using {:s}".format(DataPath))
 DataPath = DataPath + "/"
 
-#this is the base URL for the data
-repoURL = "http://vmo.igpp.ucla.edu/data1/CRRES/"
+#these are the base URLs for the data
+# Ephemeris, LPI, MAG, PWE
+uclaURL = "http://vmo.igpp.ucla.edu/data1/CRRES/"
+# attitude, ephemeris, magnetic field, heef, mea, onr604, protel
+spdfURL = "https://spdf.gsfc.nasa.gov/pub/data/crres/"
