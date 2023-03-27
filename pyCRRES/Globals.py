@@ -13,3 +13,6 @@ DataPath = DataPath + "/"
 uclaURL = "http://vmo.igpp.ucla.edu/data1/CRRES/"
 # attitude, ephemeris, magnetic field, heef, mea, onr604, protel
 spdfURL = "https://spdf.gsfc.nasa.gov/pub/data/crres/"
+
+
+ModulePath = os.path.dirname(__file__) + '/'
